@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+/*清除默认 内边距、外边距*/
+
+html,
+body,
+ul,
+li,
+ol,
+dl,
+dd,
+dt,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+legend,
+img,
+pre,
+input,
+audio,
+video {
+    margin: 0;
+    padding: 0
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+}
+
+
+/* 怪异盒子 */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* 页面部分 */
+
+html,
+body {
+    width: 100%;
+}
+
+nav {
+    width: 870px;
+    height: 40px;
+    margin: 100px auto;
+    background-color: #888;
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+nav a {
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    /* perspective: 3000px; */
+    -ms-perspective-origin: bottom center;
+    transform-style: preserve-3d;
+    /* overflow: hidden; */
+    transition: 1s 0s;
+}
+
+nav a p:nth-child(1) {
+    background-color: #518324;
+}
+
+nav a p:nth-child(2) {
+    transform: rotateX(-90deg);
+    transform-origin: top;
+    transition: all 1s 0s ease;
+    background-color: #26c9e6;
+    /* transform-style: preserve-3d; */
+    /* perspective: 30000px; */
+}
+
+nav a:hover {
+    transform: rotateX(90deg) scale(1.1);
+    transform-origin: top;
+}
+
+nav a:hover p:nth-child(2) {
+    transform: rotateX(-90deg);
+}
+
+
+/* nav a:hover p:nth-child(2) {
+    transform: rotateX(80deg);
+} */
